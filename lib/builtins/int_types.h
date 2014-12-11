@@ -56,7 +56,7 @@ typedef union
     }s;
 } udwords;
 
-#if __LP64__
+#if __LP64__ && !defined(ANDROID)
 #define CRT_HAS_128BIT
 #endif
 
@@ -140,4 +140,3 @@ typedef union
 } long_double_bits;
 
 #endif /* INT_TYPES_H */
-
